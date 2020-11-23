@@ -4,8 +4,8 @@ pipeline {
        stage('write') {
            steps {
                script {
-                   def datas = readYaml file: 'Routes.yml'
-                   println datas.branchrules.platform.branchname
+                   def filecontent=libraryResource "com/nbs/remo/Routes.yaml"
+	                def pipelineRulesList = yaml.load(filecontent)
                    
                }
            }
