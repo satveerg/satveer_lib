@@ -4,7 +4,7 @@ pipeline {
        stage('write') {
            steps {
                script {
-                   def filecontent=libraryResource "marriott/Routes.yml"
+                   def filecontent=libraryResource "com/marriott/platform/Routes.yml"
 	                def pipelineRulesList = yaml.load(filecontent)
                    
                }
