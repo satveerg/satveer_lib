@@ -1,1 +1,8 @@
-
+--- 
+branchrules: 
+  platform: 
+    branchname: sprint-dev-aps 
+    environment: ram-dev-10
+  leisure: 
+    branchname: sprint-dev-leisure 
+    environment: ram-dev-11
