@@ -5,7 +5,7 @@ pipeline {
            steps {
                script {
                    def datas = readYaml file: 'Routes.yml'
-                   println datas.branchrules.key.branchname
+                   println datas.branchrules.platform.branchname
                    
                }
            }
