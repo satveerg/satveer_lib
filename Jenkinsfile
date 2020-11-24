@@ -4,10 +4,20 @@ pipeline {
        stage('write') {
            steps {
                script {
-                   readYaml
+                  def call(String APP) {
+                  return $APP
+                  }
                    
                }
            }
        }
+      stage('call') {
+         steps {
+            script {
+            ab=(satveer)
+               println $ab
+            }
+         }
+      }
    }
 }
