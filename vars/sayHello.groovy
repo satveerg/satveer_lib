@@ -7,7 +7,7 @@ def call(body) {
     pipeline {
         agent any
         environment {
-            BRANCH_NAME = env.BRANCH_NAME
+            BRANCH_NAME = "${env.BRANCH_NAME}"
             output = readYaml('$BRANCH_NAME')
         }
         stages {
