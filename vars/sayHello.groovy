@@ -5,7 +5,7 @@ def call(body) {
     body()
 
     def output = readYaml('sprint-dev-aps')
-    println output
+    export OSE_PROJECT=output
     pipeline {
         agent any
         stages {
