@@ -4,10 +4,11 @@ def call(body) {
     body.delegate = pipelineParams
     body()
 
-    def output = readYaml('sprint-dev-aps')
-    export OSE_PROJECT=output
     pipeline {
         agent any
+        define {
+            def output = readYaml('sprint-dev-aps')
+        }
         stages {
             stage('print') {
                 steps {
