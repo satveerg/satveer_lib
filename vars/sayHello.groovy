@@ -23,7 +23,9 @@ def call(body) {
             }
             stage('when') {
                 when {
-                    expression env.output != null
+                    expression {
+                        return env.output != null
+                    }
                 }
                 steps {
                     sh 'echo exectuting when'
