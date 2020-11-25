@@ -12,10 +12,10 @@ def call(String appBranchName) {
 
          branchrules->
              def branchName = branchrules.value.branchname
-                 environment = branchrules.value.environment
 
              if ( appBranchName == branchName ) {
              println "check if environment name is in list - " + environment
+             environment = branchrules.value.environment 
              }
 	}
         return environment
