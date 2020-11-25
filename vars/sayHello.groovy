@@ -6,7 +6,7 @@ def call() {
                 steps {
                     script {
                       readYaml
-                        println "abc"
+                      sh 'echo Running library'
                     }
                 }
             }
