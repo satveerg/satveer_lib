@@ -6,8 +6,8 @@ def call(body) {
 
     pipeline {
         agent any
-        define {
-            def output = readYaml('sprint-dev-aps')
+        environment {
+            output = readYaml('sprint-dev-aps')
         }
         stages {
             stage('print') {
