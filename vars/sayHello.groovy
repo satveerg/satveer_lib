@@ -21,8 +21,7 @@ def call(body) {
                 steps {
                     script {
                        sh '''
-                       echo $output
-                        echo Running library
+                       echo This environment name is $output
                         '''
                     }
                 }
