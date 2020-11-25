@@ -2,6 +2,7 @@
 import org.yaml.snakeyaml.Yaml
 def call(String appBranchName) {
 	def yaml = new Yaml()
+	def environment = ''
 	println("YAML object to read pipeline rules has been created")
     def filecontent=libraryResource "com/marriott/platform/Routes.yml"
 	  def pipelineRulesList = yaml.load(filecontent)
@@ -11,7 +12,7 @@ def call(String appBranchName) {
 
          branchrules->
              def branchName = branchrules.value.branchname
-             def environment = branchrules.value.environment
+                 environment = branchrules.value.environment
 
              println "check if branch name is in list - " + branchName
 	     println "check if environment name is in list - " + environment
@@ -22,3 +23,4 @@ def call(String appBranchName) {
 	}
        return environment
 }
+
