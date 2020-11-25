@@ -7,7 +7,7 @@ def call(body) {
     pipeline {
         agent any
         environment {
-            output = readYaml('sprint-dev-aps')
+            output = readYaml('sprint-dev-lll')
             BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
         }
         stages {
