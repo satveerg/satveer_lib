@@ -3,6 +3,7 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = pipelineParams
     body()
+def output = readYaml('sprint-dev-aps')
     pipeline {
         agent any
         stages {
@@ -16,8 +17,11 @@ def call(body) {
             stage('call') {
                 steps {
                     script {
-                     readYaml('sprint-dev-aps')
-                      sh 'echo Running library'
+                     
+                      sh '''
+                       echo $output
+                        echo Running library
+                        '''
                     }
                 }
             }
