@@ -13,11 +13,10 @@ def call(body) {
         stages {
             stage('call') {
                 steps {
-                       sh '''
+                       sh """
                        echo Branch name is $BRANCH_NAME
                        echo "env name is ${env.output}"
-                       printenv
-                        '''
+                        """
                 }
             }
             stage('when') {
