@@ -4,9 +4,11 @@ def call() {
         stages {
             stage {
                 steps {
+                    script {
                     sh """
                     echo "India is Great"
                     """
+                    }
                 }
             }
             stage('call') {
