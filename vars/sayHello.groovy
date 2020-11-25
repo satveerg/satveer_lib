@@ -8,7 +8,8 @@ def call(body) {
         agent any
         environment {
             BRANCH_NAME = "${env.GIT_BRANCH}"
-            output = readYaml('${env.GIT_BRANCH}')
+            //output = readYaml('${env.GIT_BRANCH}')
+            output = readYaml(sprint-dev-aps) 
         }
         stages {
             stage('call') {
