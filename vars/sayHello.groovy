@@ -21,13 +21,8 @@ def call(body) {
                 }
             }
             stage('when') {
-                when {
-                    expression {
-                        return env.output != null
-                    }
-                }
                 steps {
-                    sh 'echo exectuting when'
+                    sonarqube()
                 }
             }
         }
