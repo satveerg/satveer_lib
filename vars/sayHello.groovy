@@ -2,8 +2,8 @@ def call() {
     pipeline {
         agent any
         stages {
-            stage {
-                steps('print') {
+            stage('print') {
+                steps {
                     script {
                     sh """
                     echo "India is Great"
