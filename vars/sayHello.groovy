@@ -3,7 +3,7 @@ def call() {
         agent any
         stages {
             stage {
-                steps {
+                steps('print') {
                     script {
                     sh """
                     echo "India is Great"
