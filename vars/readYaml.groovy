@@ -19,8 +19,8 @@ def call(String appBranchName) {
 
              if ( appBranchName==~branchName ) {
              println "check if environment name is in list - " + environment
+             return environment
              }
 	}
-       return environment
 }
 
