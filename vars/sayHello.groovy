@@ -5,7 +5,8 @@ def call() {
             stage('call') {
                 steps {
                     script {
-                      readYaml  
+                      readYaml
+                        println "abc"
                     }
                 }
             }
