@@ -4,6 +4,7 @@ def call(body) {
     body.delegate = pipelineParams
     body()
 def output = readYaml('sprint-dev-aps')
+    println output
     pipeline {
         agent any
         stages {
