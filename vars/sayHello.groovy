@@ -11,13 +11,6 @@ def call(body) {
             output = readYaml('$BRANCH_NAME')
         }
         stages {
-            stage('print') {
-                steps {
-                    sh """
-                    echo "India is Great"
-                    """
-                }
-            }
             stage('call') {
                 steps {
                     script {
