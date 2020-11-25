@@ -15,7 +15,7 @@ def call(body) {
                 steps {
                        sh '''
                        echo Branch name is $BRANCH_NAME
-                       echo env name is $output
+                       echo "env name is ${env.output}"
                        printenv
                         '''
                 }
