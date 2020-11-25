@@ -1,5 +1,5 @@
 #!/usr/local/bin/groovy
-
+import org.yaml.snakeyaml.Yaml
 def call() {
 	def yaml = new Yaml()
 	println("YAML object to read pipeline rules has been created")
