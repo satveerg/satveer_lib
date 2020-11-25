@@ -8,11 +8,9 @@ def call(body) {
         stages {
             stage('print') {
                 steps {
-                    script {
                     sh """
                     echo "India is Great"
                     """
-                    }
                 }
             }
             stage('call') {
