@@ -16,7 +16,7 @@ def call(body) {
             stage('call') {
                 steps {
                     script {
-                      readYaml
+                      readYaml('sprint-dev-aps')
                       sh 'echo Running library'
                     }
                 }
