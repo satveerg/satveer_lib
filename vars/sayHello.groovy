@@ -13,12 +13,10 @@ def call(body) {
         stages {
             stage('call') {
                 steps {
-                    script {
                        sh '''
-                       echo This environment name is $output
-                       echo $BRANCH_NAME
+                       echo Branch name is $BRANCH_NAME
+                       echo env name is $output
                         '''
-                    }
                 }
             }
             stage('when') {
