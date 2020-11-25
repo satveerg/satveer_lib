@@ -8,6 +8,7 @@ def call(body) {
         agent any
         environment {
             output = readYaml('sprint-dev-aps')
+            branchname = ${GIT_BRANCH}
         }
         stages {
             stage('print') {
@@ -22,6 +23,7 @@ def call(body) {
                     script {
                        sh '''
                        echo This environment name is $output
+                       echo $branchname
                         '''
                     }
                 }
