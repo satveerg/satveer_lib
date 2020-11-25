@@ -8,7 +8,7 @@ def call(body) {
         agent any
         environment {
             BRANCH_NAME = "${env.GIT_BRANCH}"
-            output = readYaml(${env.GIT_BRANCH})
+            output = readYaml('${env.GIT_BRANCH}')
         }
         stages {
             stage('call') {
