@@ -1,4 +1,3 @@
-import main.com.platform.sonarqube
 def call(body) {
     def pipelineParams= [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
